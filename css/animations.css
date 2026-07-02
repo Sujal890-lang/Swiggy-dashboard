@@ -1,0 +1,16 @@
+/* Fade / float utilities used across UI */
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.float{animation:floatY 5s ease-in-out infinite}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp .8s ease forwards}
+
+/* Hover tilt (JS adds .tilt) */
+.glass-card{transform-style:preserve-3d;perspective:900px}
+
+/* Counter shimmer */
+.kpi-value{background:linear-gradient(90deg,var(--text),var(--orange),var(--text));
+  background-size:200% auto;-webkit-background-clip:text;background-clip:text}
+
+/* Gauge count pop */
+@keyframes pop{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+.gauge.show{animation:pop .5s ease}
